@@ -82,4 +82,10 @@ return {
     --   },
     -- }
   end,
+
+  -- autocmd BufNewFile,BufRead *.slim setlocal filetype=slim
+  vim.api.nvim_create_autocmd({"BufNewFile","BufRead"}, {
+      pattern = "*.slim",
+      command = "setlocal filetype=slim"
+    }),
 }
